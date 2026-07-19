@@ -1,15 +1,826 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Dołącz do zamkniętych testów Wallora – aplikacji z tapetami 4K, AMOLED i AI na Androida.">
-<meta name="theme-color" content="#050507"><title>Wallora – Beta Test</title>
-<style>
-:root{--bg:#050507;--surface:rgba(255,255,255,.065);--text:#fff;--muted:#b9b9c3;--pink:#ff2ca8;--purple:#7c3cff;--blue:#3d7cff;--border:rgba(255,255,255,.12)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;color:var(--text);background:radial-gradient(circle at 12% 12%,rgba(124,60,255,.22),transparent 32%),radial-gradient(circle at 85% 18%,rgba(255,44,168,.17),transparent 30%),radial-gradient(circle at 50% 80%,rgba(61,124,255,.13),transparent 35%),var(--bg);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:min(1180px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(20px);background:rgba(5,5,7,.72);border-bottom:1px solid rgba(255,255,255,.08)}.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:1.25rem;font-weight:800}.brand img{width:42px;height:42px;object-fit:contain;border-radius:12px}.nav-link{color:var(--muted);font-weight:600}.hero{padding:92px 0 72px}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:60px}.badge{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-size:.9rem;font-weight:700;margin-bottom:24px}.dot{width:9px;height:9px;border-radius:50%;background:#43e97b;box-shadow:0 0 18px rgba(67,233,123,.8)}h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.98;letter-spacing:-.06em;margin-bottom:24px}.gradient{background:linear-gradient(100deg,#fff 5%,#ff67c4 42%,#8a63ff 70%,#55a0ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem);margin-bottom:34px}.buttons{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}.btn{min-height:56px;display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:0 24px;font-weight:800;transition:.22s}.primary{background:linear-gradient(120deg,var(--pink),var(--purple),var(--blue));box-shadow:0 14px 38px rgba(124,60,255,.35)}.primary:hover{transform:translateY(-2px)}.secondary{border:1px solid var(--border);background:var(--surface)}.micro{color:#8f8f9b;font-size:.9rem}.phone-stage{position:relative;min-height:650px;display:grid;place-items:center}.glow{position:absolute;width:410px;height:410px;border-radius:50%;background:radial-gradient(circle,rgba(255,44,168,.28),rgba(124,60,255,.18) 45%,transparent 70%);filter:blur(22px)}.phone{position:relative;z-index:2;width:min(340px,82vw);padding:10px;border-radius:42px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.18);box-shadow:0 25px 80px rgba(0,0,0,.45);transform:rotate(2deg)}.phone img{border-radius:34px}.chip{position:absolute;z-index:3;padding:13px 17px;border-radius:15px;border:1px solid var(--border);background:rgba(14,14,20,.83);backdrop-filter:blur(16px);font-weight:800}.c1{left:0;top:18%}.c2{right:0;bottom:16%}.section{padding:88px 0}.heading{max-width:740px;margin-bottom:42px}.eyebrow{color:#ff74c8;font-size:.9rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}h2{font-size:clamp(2.1rem,5vw,4rem);line-height:1.05;letter-spacing:-.045em;margin-bottom:16px}.copy{color:var(--muted);font-size:1.05rem}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{min-height:190px;padding:24px;border:1px solid var(--border);border-radius:24px;background:var(--surface)}.feature .i{font-size:1.7rem;margin-bottom:18px}.feature h3{margin-bottom:8px}.feature p{color:var(--muted);font-size:.95rem}.gallery{display:grid;grid-template-columns:.82fr .82fr 1.36fr;align-items:start;gap:20px}.shot{overflow:hidden;border-radius:28px;border:1px solid var(--border);background:#09090d;box-shadow:0 22px 60px rgba(0,0,0,.3)}.cta{padding:48px;border-radius:34px;border:1px solid rgba(255,255,255,.14);background:radial-gradient(circle at 8% 10%,rgba(255,44,168,.22),transparent 30%),radial-gradient(circle at 90% 90%,rgba(61,124,255,.2),transparent 32%),rgba(255,255,255,.055);text-align:center}.cta p{max-width:680px;margin:0 auto 28px;color:var(--muted)}.cta .buttons{justify-content:center;margin-bottom:0}footer{padding:30px 0 42px;color:#8f8f99;font-size:.9rem}.footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:24px}.links{display:flex;gap:18px;flex-wrap:wrap}@media(max-width:960px){.hero-grid{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}.gallery .shot:last-child{grid-column:1/-1;max-width:720px;justify-self:center}}@media(max-width:620px){.container{width:min(100% - 24px,1180px)}.nav-link{display:none}.hero{padding:58px 0 40px}h1{font-size:clamp(3.1rem,16vw,4.8rem)}.buttons{flex-direction:column}.btn{width:100%}.phone-stage{min-height:500px}.chip{font-size:.8rem;padding:10px 12px}.features,.gallery{grid-template-columns:1fr}.gallery .shot:last-child{grid-column:auto}.section{padding:62px 0}.cta{padding:34px 20px}.footer{flex-direction:column}}
-</style></head>
-<body><nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><img src="wallora-logo.png" alt="Logo Wallora"><span>Wallora</span></a><a class="nav-link" href="#gallery">Zobacz aplikację</a></div></nav>
-<main id="top"><section class="hero"><div class="container hero-grid"><div><div class="badge"><span class="dot"></span>Zamknięte testy Google Play</div><h1>Nadaj ekranowi <span class="gradient">nowy wymiar.</span></h1><p class="hero-copy">Wallora to aplikacja z efektownymi tapetami 4K, AMOLED i kolekcjami AI. Dołącz do testów beta, odkrywaj nowe tapety i pomóż nam przygotować najlepszą wersję aplikacji.</p><div class="buttons"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor" target="_blank" rel="noopener">🚀 Zostań testerem</a><a class="btn secondary" href="#gallery">Zobacz screeny</a></div><p class="micro">Bezpłatny udział • Android • Formularz zajmuje około minuty</p></div><div class="phone-stage"><div class="glow"></div><div class="chip c1">✨ 4K & AMOLED</div><div class="chip c2">🔥 Nowe tapety co tydzień</div><div class="phone"><img src="wallora-home.png" alt="Ekran główny Wallora"></div></div></div></section>
-<section class="section"><div class="container"><div class="heading"><div class="eyebrow">Dlaczego Wallora?</div><h2>Tapety stworzone, by wyglądać świetnie na ekranie.</h2><p class="copy">Odkrywaj kolekcje, zapisuj ulubione obrazy i szybko znajdź styl dopasowany do siebie.</p></div><div class="features"><article class="feature"><div class="i">💎</div><h3>Jakość 4K</h3><p>Wyraźne, szczegółowe obrazy dla nowoczesnych ekranów.</p></article><article class="feature"><div class="i">🖤</div><h3>AMOLED</h3><p>Głębokie czernie, neonowe detale i ciemne motywy.</p></article><article class="feature"><div class="i">✨</div><h3>Kolekcje AI</h3><p>Unikalne motywy od neonowych zwierząt po kosmos.</p></article><article class="feature"><div class="i">🔄</div><h3>Regularne nowości</h3><p>Nowe tapety i kolekcje wraz z rozwojem aplikacji.</p></article></div></div></section>
-<section class="section" id="gallery"><div class="container"><div class="heading"><div class="eyebrow">Podgląd aplikacji</div><h2>Zobacz Wallorę w akcji.</h2><p class="copy">Przeglądaj trendy, filtruj kategorie i odkrywaj tematyczne kolekcje.</p></div><div class="gallery"><figure class="shot"><img src="wallora-home.png" alt="Ekran główny Wallora" loading="lazy"></figure><figure class="shot"><img src="wallora-trending.png" alt="Trendujące tapety Wallora" loading="lazy"></figure><figure class="shot"><img src="wallora-cosmic.png" alt="Kosmiczna kolekcja Wallora" loading="lazy"></figure></div></div></section>
-<section class="section"><div class="container"><div class="cta"><div class="eyebrow">Dołącz teraz</div><h2>Pomóż nam przetestować Wallorę.</h2><p>Zapisz się przez krótki formularz. Po dodaniu Twojego Gmaila do listy testerów otrzymasz dostęp w Google Play.</p><div class="buttons"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor" target="_blank" rel="noopener">🚀 Wypełnij formularz</a></div></div></div></section></main>
-<footer><div class="container footer"><span>© 2026 Wallora. Wszelkie prawa zastrzeżone.</span><div class="links"><a href="privacy-policy.md">Polityka prywatności</a><a href="mailto:nikola.lawniczak1991@gmail.com">Kontakt</a></div></div></footer></body></html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wallora – Android Beta Test</title>
+
+  <meta
+    name="description"
+    content="Join the Wallora Android closed beta test. Discover 4K, AMOLED and AI-generated wallpapers."
+  >
+
+  <style>
+    :root {
+      --bg: #050507;
+      --surface: rgba(255, 255, 255, 0.07);
+      --surface-strong: rgba(255, 255, 255, 0.11);
+      --text: #ffffff;
+      --muted: #b9b9c3;
+      --pink: #ff2ca8;
+      --purple: #7c3cff;
+      --blue: #3d7cff;
+      --border: rgba(255, 255, 255, 0.13);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(124, 60, 255, 0.20), transparent 34%),
+        radial-gradient(circle at 85% 20%, rgba(255, 44, 168, 0.16), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 5, 7, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .language-switch button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .language-switch button.active {
+      color: var(--text);
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+    }
+
+    .hero {
+      padding: 82px 0 62px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: #e6e1ff;
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #36dd86;
+      box-shadow: 0 0 18px rgba(54, 221, 134, 0.8);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      max-width: 820px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #ffffff, #c5b2ff 42%, #ff75c9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      margin-top: 24px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.13rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 31px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      box-shadow: 0 16px 35px rgba(124, 60, 255, 0.28);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 530px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124, 60, 255, 0.38), transparent 66%);
+      filter: blur(10px);
+    }
+
+    .phone {
+      position: relative;
+      z-index: 2;
+      width: min(310px, 78vw);
+      padding: 10px;
+      border-radius: 38px;
+      background: linear-gradient(145deg, #303038, #070709);
+      box-shadow: var(--shadow);
+      transform: rotate(4deg);
+    }
+
+    .phone img {
+      width: 100%;
+      border-radius: 29px;
+    }
+
+    .section {
+      padding: 74px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+    }
+
+    .eyebrow {
+      color: #d4c8ff;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin-top: 13px;
+      font-size: 1.05rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--surface);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 9 / 17;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.025);
+    }
+
+    .cta {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(124, 60, 255, 0.23), rgba(255, 44, 168, 0.13)),
+        var(--surface);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 15px auto 25px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 55px;
+      padding: 26px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    body.lang-pl [data-lang="pl"],
+    body.lang-en [data-lang="en"] {
+      display: revert;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-copy {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 450px;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        overflow-x: auto;
+        padding-bottom: 12px;
+      }
+
+      .gallery-card {
+        min-width: 230px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .nav-inner {
+        min-height: 66px;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .cta {
+        padding: 27px 19px;
+      }
+    }
+  </style>
+</head>
+
+<body class="lang-pl">
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="wallora-logo.png" alt="Wallora logo">
+        <span>Wallora</span>
+      </a>
+
+      <div class="nav-actions">
+        <a class="nav-link" href="#gallery">
+          <span data-lang="pl">Zobacz aplikację</span>
+          <span data-lang="en">See the app</span>
+        </a>
+
+        <div class="language-switch" aria-label="Language switch">
+          <button id="plButton" class="active" type="button" onclick="setLanguage('pl')">
+            🇵🇱 PL
+          </button>
+          <button id="enButton" type="button" onclick="setLanguage('en')">
+            🇬🇧 EN
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="badge">
+            <span class="dot"></span>
+
+            <span data-lang="pl">Zamknięte testy Google Play</span>
+            <span data-lang="en">Google Play closed testing</span>
+          </div>
+
+          <div data-lang="pl">
+            <h1>
+              Nadaj ekranowi
+              <span class="gradient">nowy wymiar.</span>
+            </h1>
+
+            <p class="hero-copy">
+              Wallora to aplikacja z tapetami 4K, AMOLED i kolekcjami
+              generowanymi przez AI. Szukam osób z Androidem, które pomogą mi
+              przetestować moją pierwszą aplikację przed premierą.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dołącz do testów
+              </a>
+
+              <a class="button button-secondary" href="#how-it-works">
+                Jak to działa?
+              </a>
+            </div>
+          </div>
+
+          <div data-lang="en">
+            <h1>
+              Give your screen
+              <span class="gradient">a new dimension.</span>
+            </h1>
+
+            <p class="hero-copy">
+              Wallora is an Android wallpaper app featuring 4K, AMOLED and
+              AI-generated collections. I am looking for Android users who
+              can help test my first app before its public release.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the beta test
+              </a>
+
+              <a class="button button-secondary" href="#how-it-works">
+                How does it work?
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glow"></div>
+
+          <div class="phone">
+            <img src="wallora-home.png" alt="Wallora application home screen">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+
+        <div class="section-heading" data-lang="pl">
+          <div class="eyebrow">Dołącz w kilku krokach</div>
+          <h2>Jak zostać testerem Wallory?</h2>
+          <p class="section-copy">
+            To zajmuje tylko kilka minut. Potrzebujesz telefonu z Androidem
+            oraz adresu Gmail używanego w Google Play.
+          </p>
+        </div>
+
+        <div class="section-heading" data-lang="en">
+          <div class="eyebrow">Join in a few steps</div>
+          <h2>How to become a Wallora tester</h2>
+          <p class="section-copy">
+            It only takes a few minutes. You need an Android phone and the
+            Gmail address used in Google Play on that phone.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <article class="step">
+            <div class="step-number">1</div>
+
+            <div data-lang="pl">
+              <h3>Wypełnij formularz</h3>
+              <p>
+                Podaj adres Gmail używany na telefonie z Androidem.
+              </p>
+            </div>
+
+            <div data-lang="en">
+              <h3>Fill in the form</h3>
+              <p>
+                Enter the Gmail address used on your Android phone.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">2</div>
+
+            <div data-lang="pl">
+              <h3>Dodam Cię do listy</h3>
+              <p>
+                Twój adres zostanie dodany do zamkniętej listy testerów
+                w Google Play.
+              </p>
+            </div>
+
+            <div data-lang="en">
+              <h3>I will add your Gmail</h3>
+              <p>
+                Your Gmail address will be added to the Google Play closed
+                testing list.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">3</div>
+
+            <div data-lang="pl">
+              <h3>Otrzymasz link</h3>
+              <p>
+                Wyślę Ci oficjalny link Google Play umożliwiający dołączenie
+                do testu i instalację aplikacji.
+              </p>
+            </div>
+
+            <div data-lang="en">
+              <h3>You will receive a link</h3>
+              <p>
+                I will send you the official Google Play link to join the test
+                and install the app.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">4</div>
+
+            <div data-lang="pl">
+              <h3>Testuj przez 14 dni</h3>
+              <p>
+                Pozostań w programie testów i zachowaj aplikację przez minimum
+                14 dni. Każda opinia jest mile widziana.
+              </p>
+            </div>
+
+            <div data-lang="en">
+              <h3>Test for 14 days</h3>
+              <p>
+                Stay enrolled and keep the app installed for at least 14 days.
+                Any feedback is greatly appreciated.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+
+        <div class="section-heading" data-lang="pl">
+          <div class="eyebrow">Podgląd aplikacji</div>
+          <h2>Zobacz Wallorę w akcji</h2>
+          <p class="section-copy">
+            Przeglądaj kolekcje, odkrywaj popularne tapety i wybieraj obrazy
+            dopasowane do ekranów AMOLED.
+          </p>
+        </div>
+
+        <div class="section-heading" data-lang="en">
+          <div class="eyebrow">App preview</div>
+          <h2>See Wallora in action</h2>
+          <p class="section-copy">
+            Browse curated collections, discover trending wallpapers and find
+            images designed for AMOLED screens.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-card">
+            <img src="wallora-home.png" alt="Wallora home screen">
+          </div>
+
+          <div class="gallery-card">
+            <img src="wallora-trending.png" alt="Wallora trending wallpapers">
+          </div>
+
+          <div class="gallery-card">
+            <img src="wallora-cosmic.png" alt="Wallora cosmic wallpaper collection">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="cta" data-lang="pl">
+          <h2>Pomożesz mi opublikować Wallorę? ❤️</h2>
+
+          <p>
+            To moja pierwsza aplikacja na Androida. Każdy tester przybliża mnie
+            do jej oficjalnej premiery w Google Play. Dziękuję za poświęcony czas!
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wypełnij formularz
+          </a>
+        </div>
+
+        <div class="cta" data-lang="en">
+          <h2>Will you help me publish Wallora? ❤️</h2>
+
+          <p>
+            This is my first Android app. Every tester brings me closer to its
+            official Google Play release. Thank you for your time and support!
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdie3CH7pUTczT7d1I2tybsBdBXuEIBLn0muwzDQF9hDaFITw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fill in the form
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Wallora</span>
+
+      <div class="footer-links">
+        <a href="privacy-policy.md">
+          <span data-lang="pl">Polityka prywatności</span>
+          <span data-lang="en">Privacy policy</span>
+        </a>
+
+        <a href="mailto:nikola.lawniczak1991@gmail.com">
+          <span data-lang="pl">Kontakt</span>
+          <span data-lang="en">Contact</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLanguage(language) {
+      const body = document.body;
+      const plButton = document.getElementById("plButton");
+      const enButton = document.getElementById("enButton");
+
+      body.classList.remove("lang-pl", "lang-en");
+      body.classList.add("lang-" + language);
+
+      plButton.classList.toggle("active", language === "pl");
+      enButton.classList.toggle("active", language === "en");
+
+      document.documentElement.lang = language;
+      localStorage.setItem("wallora-language", language);
+    }
+
+    const savedLanguage = localStorage.getItem("wallora-language");
+
+    if (savedLanguage === "pl" || savedLanguage === "en") {
+      setLanguage(savedLanguage);
+    } else {
+      const browserLanguage = navigator.language.toLowerCase();
+
+      if (browserLanguage.startsWith("pl")) {
+        setLanguage("pl");
+      } else {
+        setLanguage("en");
+      }
+    }
+  </script>
+
+</body>
+</html>
